@@ -58,9 +58,6 @@
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat
-[submodule "bundle/vim-signature"]
-	path = bundle/vim-signature
-	url = https://github.com/kshenoy/vim-signature
 [submodule "bundle/vim-sql-workbench"]
 	path = bundle/vim-sql-workbench
 	url = https://github.com/cosminadrianpopescu/vim-sql-workbench
