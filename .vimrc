@@ -102,16 +102,17 @@ command! Csg call Csg()
 map <Leader><Leader>g :Csg<CR>
 
 " buffers
-map <C-w><C-h> :bp<CR>
-map <C-w><C-l> :bn<CR>
+map <silent> <C-w><C-h> :bp<CR>
+map <silent> <C-w><C-l> :bn<CR>
 map <C-w><C-j> :buffers<CR>:buffer<Space>
 map <F7> :buffers<CR>:buffer<Space>
 map <Leader><Leader>d :Bdelete<CR>
 set hidden
 
 " bufferline
-let g:bufferline_show_bufnr = 0
-let g:bufferline_solo_highlight = 1
+let g:bufferline_show_bufnr=0
+let g:bufferline_solo_highlight=1
+let g:bufferline_rotate = 1
 
 " choosewin
 nmap <C-w>w <Plug>(choosewin)
@@ -125,9 +126,9 @@ let g:choosewin_overlay_font_size="small"
 highlight ChooseWinOverlayCurrent ctermfg=45 ctermbg=45
 highlight ChooseWinOverlay ctermfg=26 ctermbg=26
 
-" Signature
-highlight SignColumn ctermbg=none
-highlight SignatureMarkText ctermbg=none
+" " Signature (deleted)
+" highlight SignColumn ctermbg=none
+" highlight SignatureMarkText ctermbg=none
 
 " Better Whitespace
 highlight ExtraWhitespace ctermbg=green
@@ -214,8 +215,19 @@ tmap <Esc> <C-N><C-\>
 map <Leader><Leader>r :edit<CR>
 "temp unset highlighting on searches
 nnoremap <silent> <Esc> :nohlsearch<CR>
+"easy insert movement
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+"terminal behaviour
+inoremap <C-b> <BS>
+inoremap <C-a> <Esc>I
+inoremap <C-e> <Esc>A
+inoremap <C-w> <Esc>bdea
 
 " Settings I like
+set winfixwidth
 set number
 set tabstop=4
 set softtabstop=4
